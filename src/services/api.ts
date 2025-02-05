@@ -1,7 +1,7 @@
 import axios from "axios";
 import { BandFormValues } from "../hooks/useBandForm";
 
-const baseURL = "https://my-new-fav-band-5d12579f2ef9.herokuapp.com";
+const baseURL = "http://127.0.0.1:8000";
 
 const api = axios.create({
   baseURL: baseURL,
@@ -48,9 +48,9 @@ export async function sendGenerateTextAndPhotoRequest(prompt: BandFormValues) {
     if (!response_photo.data) throw new Error("Failed to generate photo");
 
     // Assuming the second response provides a photo URL
-    const photoUrl = baseURL + "/" + response_photo.data.data;
+    const photoUrl = response_photo.data.data;
 
-    response_text.data.data.photo_url = response_photo.data.data;
+    response_text.data.data.photo_url = photoUrl;
     response_text.data.data.name = prompt.name;
     response_text.data.data.band = prompt.band;
     response_text.data.data.year = prompt.year;
