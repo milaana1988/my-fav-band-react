@@ -1,7 +1,7 @@
 import axios from "axios";
 import { BandFormValues } from "../hooks/useBandForm";
 
-const baseURL = "http://localhost:8000";
+const baseURL = "https://my-new-fav-band-5d12579f2ef9.herokuapp.com";
 
 const api = axios.create({
   baseURL: baseURL,
