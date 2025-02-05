@@ -1,3 +1,8 @@
+# How to run
+
+Hi, to run this app, you need first to install the packages - npm install
+After that, you can run npm run dev
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
